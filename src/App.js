@@ -55,13 +55,13 @@ const App = () => {
             </thead>
             <tbody>
 
-            { contacts.map((contact, key) => (
-                <tr key={key}>
-                    <td>{contact.fullName}</td>
-                    <td>{contact.address}</td>
-                    <td>{contact.phoneNumber}</td>
-                    <td>{contact.email}</td>
-                </tr>
+            {contacts.map((contact, key) => (
+                    <tr key={key}>
+                        <td>{contact.fullName}</td>
+                        <td>{contact.address}</td>
+                        <td>{contact.phoneNumber}</td>
+                        <td>{contact.email}</td>
+                    </tr>
                 )
             )}
 
@@ -69,11 +69,14 @@ const App = () => {
         </table>
         <h2> Add a Customer</h2>
         <form action="" onSubmit={handleAddFormSubmit}>
-            <input type="text" name="fullName" value={addFormData.fullName} required="required" placeholder="Enter a name"
+            <input type="text" name="fullName" value={addFormData.fullName} required="required"
+                   placeholder="Enter a name"
                    onChange={handleAddFormChange}/>
-            <input type="text" name="address" value={addFormData.address} required="required" placeholder="Enter address"
+            <input type="text" name="address" value={addFormData.address} required="required"
+                   placeholder="Enter address"
                    onChange={handleAddFormChange}/>
-            <input type="text" name="phoneNumber" value={addFormData.phoneNumber} required="required" placeholder="Enter Phone Number"
+            <input type="text" name="phoneNumber" value={addFormData.phoneNumber} required="required"
+                   placeholder="Enter Phone Number"
                    onChange={handleAddFormChange}/>
             <input type="email" name="email" value={addFormData.email} required="required" placeholder="Enter email"
                    onChange={handleAddFormChange}/>
